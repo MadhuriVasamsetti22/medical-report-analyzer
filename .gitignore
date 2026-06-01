@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+data/raw/
+models/
+outputs/
+.env
+*.pyc
+*.pyo
+.vscode/
