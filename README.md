@@ -9,9 +9,9 @@
 
 Medical reports are filled with complex clinical jargon that is difficult for patients to understand. This project builds an AI-powered pipeline that reads a medical transcription and automatically:
 
-- **Predicts the medical specialty** (e.g., Cardiology, Neurology, Orthopedics)
-- **Extracts medical entities** — diseases, conditions, and medications
-- **Generates a patient-friendly summary** in plain, simple language
+* **Predicts the medical specialty** (e.g., Cardiology, Neurology, Orthopedics)
+* **Extracts medical entities** — diseases, conditions, and medications
+* **Generates a patient-friendly summary** in plain, simple language
 
 The entire pipeline is served through an interactive **Streamlit web application** that anyone can use.
 
@@ -31,12 +31,12 @@ The entire pipeline is served through an interactive **Streamlit web application
 
 ## 🧠 Deep Learning Concepts Demonstrated
 
-- **Transfer Learning** — Starting from Bio_ClinicalBERT pre-trained on MIMIC-III hospital records
-- **Fine-tuning** — Updating all BERT weights on specialty classification task
-- **Custom Weighted Loss** — WeightedTrainer with class-balanced cross-entropy to handle 30:1 class imbalance
-- **Seq2Seq Architecture** — BART encoder-decoder for abstractive summarization
-- **Zero-shot NER** — scispaCy BC5CDR model used directly without additional training
-- **Mixed Precision Training** — fp16 training on Google Colab T4 GPU
+* **Transfer Learning** — Starting from Bio_ClinicalBERT pre-trained on MIMIC-III hospital records
+* **Fine-tuning** — Updating all BERT weights on specialty classification task
+* **Custom Weighted Loss** — WeightedTrainer with class-balanced cross-entropy to handle 30:1 class imbalance
+* **Seq2Seq Architecture** — BART encoder-decoder for abstractive summarization
+* **Zero-shot NER** — scispaCy BC5CDR model used directly without additional training
+* **Mixed Precision Training** — fp16 training on Google Colab T4 GPU
 
 <br>
 
@@ -160,8 +160,8 @@ pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/e
 ```
 
 ### 4. Download the dataset
-- Go to [kaggle.com/datasets/tboyle10/medicaltranscriptions](https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions)
-- Download and place `mtsamples.csv` in `data/raw/`
+* Go to [kaggle.com/datasets/tboyle10/medicaltranscriptions](https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions)
+* Download and place `mtsamples.csv` in `data/raw/`
 
 ### 5. Run the pipeline
 ```bash
@@ -200,10 +200,10 @@ streamlit run app/streamlit_app.py
 
 Open your browser at `http://localhost:8501`. Paste any medical transcription and click **Analyze Report** to get:
 
-- Predicted medical specialty with confidence score
-- Top-3 specialty predictions
-- Extracted diseases and medications
-- Patient-friendly plain language summary
+* Predicted medical specialty with confidence score
+* Top-3 specialty predictions
+* Extracted diseases and medications
+* Patient-friendly plain language summary
 
 ### Sample Input
 ```
@@ -263,30 +263,30 @@ Summary       : A 58-year-old man with high blood pressure came in with
 
 ## ⚠️ Ethical Considerations
 
-- **Non-diagnostic:** This tool does not provide medical diagnoses or clinical advice
-- **PHI Protection:** All patient-sensitive information is de-identified before model inference
-- **Public Dataset:** MTSamples contains publicly available, already de-identified transcriptions
-- **Disclaimer:** All app outputs include a clear non-diagnostic disclaimer
-- **Not for clinical use:** This project is strictly for educational and portfolio purposes
+* **Non-diagnostic:** This tool does not provide medical diagnoses or clinical advice
+* **PHI Protection:** All patient-sensitive information is de-identified before model inference
+* **Public Dataset:** MTSamples contains publicly available, already de-identified transcriptions
+* **Disclaimer:** All app outputs include a clear non-diagnostic disclaimer
+* **Not for clinical use:** This project is strictly for educational and portfolio purposes
 
 <br>
 
 ## 🔮 Future Improvements
 
-- [ ] Fine-tune BART on medical summarization datasets for better summaries
-- [ ] Add symptom and procedure extraction to NER pipeline
-- [ ] Implement UMLS/SNOMED code mapping for extracted entities
-- [ ] Collect more training data to improve classification accuracy
-- [ ] Add multi-language support for non-English reports
-- [ ] Deploy with GPU support for faster inference
+* [ ] Fine-tune BART on medical summarization datasets for better summaries
+* [ ] Add symptom and procedure extraction to NER pipeline
+* [ ] Implement UMLS/SNOMED code mapping for extracted entities
+* [ ] Collect more training data to improve classification accuracy
+* [ ] Add multi-language support for non-English reports
+* [ ] Deploy with GPU support for faster inference
 
 <br>
 
 ## 👤 Author
 
-**Madhuri Vasamsetti**
-- GitHub: [@MadhuriVasamsetti22](https://github.com/MadhuriVasamsetti22)
-- Project: [medical-report-analyzer](https://github.com/MadhuriVasamsetti22/medical-report-analyzer)
+**Madhuri Vasamsetti  , Dharun Vardhineedi**
+* GitHub: [@MadhuriVasamsetti22](https://github.com/MadhuriVasamsetti22)
+* Project: [medical-report-analyzer](https://github.com/MadhuriVasamsetti22/medical-report-analyzer)
 
 <br>
 
